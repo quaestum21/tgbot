@@ -13,7 +13,12 @@ API_ID = config('API_ID', cast=int)
 API_HASH = config('API_HASH')
 PHONE = config('PHONE')
 LOGIN = config('LOGIN')
-
+proxy_settings = {
+    "scheme": "mtproxy",
+    "hostname": "mtuxlji0mi4ylji0nq.rand-07.mtproto.icu",   # из списка
+    "port": 443,                    # из списка
+    "secret": "ee21112222333344445555666677778888636c6f756463646e2d616d732d30372e63646e2e79616e6465782e6e6574"
+}
 
 group_ids_str = config('GROUP_IDS')
 raw_ids = [x.strip() for x in group_ids_str.split(',') if x.strip()]
@@ -30,17 +35,14 @@ TARGET_USER = config('TARGET_USER')
 keywords_list = [kw.strip().lower() for kw in KEYWORDS.split(',')]
 logger.info(f"Отслеживаемые чаты: {GROUP_IDS}")
 logger.info(f"Ключевые слова: {keywords_list}")
-proxy_settings = {
-    "scheme": "socks5",           # Тип прокси
-    "hostname": "127.0.0.1",      # Адрес вашего сервера
-    "port": 1080                  # Порт, который слушает TGLock
-}
+
 # Инициализация клиента
 bot = Client(
     name=LOGIN,
     api_id=API_ID,
     api_hash=API_HASH,
-    phone_number=PHONE
+    phone_number=PHONE,
+    proxy=proxy_settings
 )
 
 async def send_alert(client: Client, chat, from_user, text: str):
