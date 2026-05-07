@@ -14,10 +14,9 @@ API_HASH = config('API_HASH')
 PHONE = config('PHONE')
 LOGIN = config('LOGIN')
 proxy_settings = {
-    "scheme": "mtproxy",
-    "hostname": "mtuxlji0mi4ylji0nq.rand-07.mtproto.icu",   # из списка
-    "port": 443,                    # из списка
-    "secret": "ee21112222333344445555666677778888636c6f756463646e2d616d732d30372e63646e2e79616e6465782e6e6574"
+    "scheme": "socks5",
+    "hostname": "68.71.245.206",   # из списка
+    "port": 4145                    # из списка
 }
 
 group_ids_str = config('GROUP_IDS')
