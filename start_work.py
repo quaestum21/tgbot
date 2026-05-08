@@ -14,9 +14,9 @@ API_HASH = config('API_HASH')
 PHONE = config('PHONE')
 LOGIN = config('LOGIN')
 proxy_settings = {
-    "scheme": "socks5",
-    "hostname": "68.71.245.206",   # из списка
-    "port": 4145                    # из списка
+    "scheme": "socks4",           # Тип прокси
+    "hostname": "111.68.31.134",      # Адрес вашего сервера
+    "port": 40385                  # Порт, который слушает TGLock
 }
 
 group_ids_str = config('GROUP_IDS')
