@@ -1,0 +1,12 @@
+[Unit]
+Description=sing-box
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sing-box run -c /etc/sing-box/config.json
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
