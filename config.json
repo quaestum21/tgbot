@@ -1,0 +1,23 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 1080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "ss-out",
+      "server": "185.193.51.118",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "LFjjvW8e8f113Am6HEobTJ"
+    }
+  ]
+}
