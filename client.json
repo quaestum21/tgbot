@@ -1,0 +1,10 @@
+{
+    "server": "185.193.51.118",
+    "server_port": 443,
+    "password": "LFjjvW8e8f113Am6HEobTJ",
+    "method": "chacha20-ietf-poly1305",
+    "local_address": "127.0.0.1",
+    "local_port": 1080,
+    "timeout": 300,
+    "mode": "tcp_and_udp"
+}
