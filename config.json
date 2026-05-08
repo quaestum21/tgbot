@@ -1,7 +1,5 @@
 {
-  "log": {
-    "level": "info"
-  },
+  "log": { "level": "info" },
   "inbounds": [
     {
       "type": "socks",
@@ -17,7 +15,15 @@
       "server": "185.193.51.118",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
-      "password": "LFjjvW8e8f113Am6HEobTJ"
+      "password": "LFjjvW8e8f113Am6HEobTJ",
+      "plugin": "",
+      "plugin_opts": "",
+      "network": "tcp",
+      "udp_over_tcp": false,
+      "multiplex": { "enabled": false }
     }
-  ]
-} 
+  ],
+  "experimental": {
+    "cache_file": { "enabled": false }
+  }
+}
